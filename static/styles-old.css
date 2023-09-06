@@ -22,59 +22,37 @@ h3{
 }
 
 P{
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.658);
     font-size: 18px;
 }
 
 .main{
     display: flex;
-    min-height: 100vh;
-    background-image:  url("./img/parking.jpg");
-    background-color: black;
-    background-position: top right;
-    background-size: cover;
+    min-height: 50vh;
+    /* max-width: 80%; */
+    background-image:  url("./img/map.png");
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
+    background-size: 55%;
 }
-.main::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.5); /* Здесь можно установить цвет overlay и его прозрачность */
-    background: linear-gradient(to right, rgb(9, 0, 41), rgba(0, 0, 0, 0)); /* Градиент от черного к прозрачному */
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Установите z-index по вашему усмотрению, чтобы контент оставался выше overlay */
-  }
 .left{
     width: 75%;
-    padding-top: 30px;
+    padding-top: 100px;
     padding-left: 100px;
+    /* background: rgb(203, 52, 191); */
     min-width: 500px;
-    z-index: 2;
+    /* border: 5px solid white; */
 }
 .form {
     background-color: #b1b1b143;
     padding: 30px;
     border-radius: 10px;
-    /* color: black; */
+    color: black;
     width: 50%;
     min-width: 600px;
- 
+    /* background: green; */
+    /* margin-left: 100px; */
 }
-.form .form-check-label {
-    color: white;
-}
-.inline{
-    display: inline;
-}
-.form-label{
-    color: white;
-}
-
 .hidden{
     display: none;
     visibility: none; 
@@ -88,12 +66,12 @@ P{
 }
 .case{
     /* margin-left: 100px; */
-    width: 80%;
+    width: 50%;
     min-width: 600px;
 
 }
 .right {
-    /* min-height: 600px; */
+    min-height: 600px;
     width: 25%;
     flex-shrink: 5;
     /* background: #000; */
@@ -117,7 +95,7 @@ P{
     margin: 0;
     margin-bottom: 20px;
     /* background: rgb(255, 255, 255); */
-    /* width: 25%; */
+    width: 25%;
     font-size: 20px;
 }
 .tab{
@@ -135,7 +113,6 @@ P{
 .tab_active{
     border-bottom: 1px solid #ffffff;
     /* text-decoration: underline; */
-
     
 
    
