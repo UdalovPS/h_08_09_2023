@@ -209,3 +209,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
    });
 });
+
+var rangeInput = document.getElementById('customRange3');
+var rangeValue = document.getElementById('rangeValue');
+
+// Добавляем обработчик события для обновления элемента вывода
+rangeInput.addEventListener('input', function() {
+    rangeValue.textContent = this.value;
+});
