@@ -12,7 +12,7 @@ templates = Jinja2Templates(directory='templates')
 
 @app.get("/", response_class=HTMLResponse)
 async def get_index_html(request: Request):
-    return templates.TemplateResponse("test.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.post("/predict_one")
