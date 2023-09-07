@@ -34,7 +34,7 @@ P{
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100%;
+    /* background-size: 100%; */
     position: relative;
 }
 .main::before {
@@ -50,7 +50,7 @@ P{
     z-index: 0; /* Установите z-index по вашему усмотрению, чтобы контент оставался выше overlay */
   }
 .left{
-    width: 75%;
+    width: 100%;
     padding-top: 30px;
     padding-left: 100px;
     min-width: 500px;
@@ -91,7 +91,7 @@ P{
 }
 .case{
     /* margin-left: 100px; */
-    width: 80%;
+    width: 100%;
     min-width: 600px;
 
 }
