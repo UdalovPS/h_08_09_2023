@@ -20,15 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const formData = new FormData(form1);
-        const textInput = formData.get('textInput');
-        if (textInput.trim().length < 4){
-            console.error('запрос короче 4 символов');
-            document.getElementById('short-message').textContent='Введите минимум 4 буквы';
-        } else {
+        console.log(formData);
+        // const textInput = formData.get('textInput');
+        // if (textInput.trim().length < 1){
+        //     console.error('запрос короче 4 символов');
+        //     document.getElementById('short-message').textContent='Введите данные';
+        // } else {
             // "/req-file/?format=json"
             // "/one-string/?format=json"
             try {
-                const response = await fetch("/one-string/?format=json", {
+                const response = await fetch("/predict_one", {
                     method: 'POST',
                     body: formData
                 });
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     console.log('response получен');
                     const data = await response.json();
-                    // outputDiv.textContent = 'Получен json: ' + JSON.stringify(data, null, 2); // Форматированный вывод JSON
+                    outputDiv.textContent = 'Получен json: ' + JSON.stringify(data, null, 2); // Форматированный вывод JSON
                     form1.reset(); // Сбрасываем форму
 
                     // ------------- формируем таблицу -------------
@@ -126,8 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             document.getElementById("bar-chart-horizontal").classList.add('canvas_active');
             document.querySelector('.body').classList.add('pb100');
-        }
     });
+    // });
     // Выбор файла 
     fileChooseButton.addEventListener('click', (e) => {
         e.preventDefault();
